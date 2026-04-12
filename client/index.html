@@ -1,1 +1,105 @@
 <!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Museos MTY</title>
+ 
+  <!-- Fuentes -->
+  <link
+    href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=DM+Sans:wght@300;400;500&display=swap"
+    rel="stylesheet"
+  />
+ 
+  <!-- Librería QR (global, requerida por qr.js) -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+ 
+  <!-- Estilos -->
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+ 
+  <!-- ══════════════════════════════════
+       HEADER
+  ══════════════════════════════════ -->
+  <header>
+    <p class="header-eyebrow">Guía Cultural · Monterrey, N.L.</p>
+    <h1>Museos más visitados<br>en <span>MTY</span></h1>
+    <div class="header-rule"></div>
+    <p class="header-intro">
+      Página informativa con los museos más populares de Monterrey.
+      Explora cada recinto, escanea el código QR para abrir su ubicación
+      en Google Maps y descubre cuál queda más cerca de ti.
+    </p>
+  </header>
+ 
+  <!-- ══════════════════════════════════
+       BANNER GEOLOCALIZACIÓN
+  ══════════════════════════════════ -->
+  <div id="nearby-banner" role="status" aria-live="polite"></div>
+ 
+  <!-- ══════════════════════════════════
+       CARRUSEL
+  ══════════════════════════════════ -->
+  <section id="carousel-section" aria-label="Carrusel de museos">
+    <p class="section-title">Recorre los espacios</p>
+    <p class="section-sub">desliza para explorar</p>
+ 
+    <!-- Estado de carga -->
+    <div id="carousel-loading">
+      <div class="spinner"></div>
+      Cargando museos…
+    </div>
+ 
+    <!-- Carrusel (oculto hasta que cargue la API) -->
+    <div id="carousel-container" style="display:none;">
+      <div class="carousel-wrapper">
+        <button class="carousel-btn prev" aria-label="Anterior">&#8592;</button>
+        <div class="carousel-track" id="carousel-track"></div>
+        <button class="carousel-btn next" aria-label="Siguiente">&#8594;</button>
+      </div>
+      <div class="carousel-dots" id="carousel-dots"></div>
+    </div>
+  </section>
+ 
+  <!-- ══════════════════════════════════
+       DIRECTORIO + TARJETAS QR
+  ══════════════════════════════════ -->
+  <section id="museums-section" aria-label="Directorio de museos">
+    <div class="museums-inner">
+      <p class="section-title">Directorio &amp; Ubicaciones</p>
+      <p class="section-sub">escanea el QR para abrir Google Maps</p>
+ 
+      <div class="museum-grid" id="museum-grid">
+        <!-- Skeletons de carga -->
+        <div class="skeleton-card">
+          <div class="skel skel-img"></div>
+          <div class="skel skel-line"></div>
+          <div class="skel skel-line short"></div>
+        </div>
+        <div class="skeleton-card">
+          <div class="skel skel-img"></div>
+          <div class="skel skel-line"></div>
+          <div class="skel skel-line short"></div>
+        </div>
+        <div class="skeleton-card">
+          <div class="skel skel-img"></div>
+          <div class="skel skel-line"></div>
+          <div class="skel skel-line short"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+ 
+  <!-- ══════════════════════════════════
+       FOOTER
+  ══════════════════════════════════ -->
+  <footer>
+    <span>Museos MTY</span> · Página informativa · Monterrey, Nuevo León &copy; 2025
+  </footer>
+ 
+  <!-- Punto de entrada JS (ES Modules) -->
+  <script type="module" src="js/app.js"></script>
+ 
+</body>
+</html>

@@ -1,0 +1,296 @@
+/* ════════════════════════════════════
+   styles.css  –  Museos MTY
+════════════════════════════════════ */
+
+/* ── Variables ── */
+:root {
+  --cream:   #f5f0e8;
+  --ink:     #1a1208;
+  --rust:    #b84d1e;
+  --gold:    #d4a94a;
+  --sand:    #e8dcc8;
+  --shadow:  rgba(26,18,8,.15);
+}
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  font-family: 'DM Sans', sans-serif;
+  background: var(--cream);
+  color: var(--ink);
+  min-height: 100vh;
+}
+
+/* ── HERO / HEADER ── */
+header {
+  position: relative;
+  background: var(--ink);
+  padding: 3.5rem 1.5rem 2.5rem;
+  text-align: center;
+  overflow: hidden;
+}
+header::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background:
+    repeating-linear-gradient(
+      45deg,
+      transparent,
+      transparent 18px,
+      rgba(212,169,74,.06) 18px,
+      rgba(212,169,74,.06) 19px
+    );
+}
+.header-eyebrow {
+  font-family: 'DM Sans', sans-serif;
+  font-size: .7rem;
+  font-weight: 500;
+  letter-spacing: .25em;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: .8rem;
+}
+header h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(2rem, 6vw, 4rem);
+  font-weight: 900;
+  color: var(--cream);
+  line-height: 1.1;
+  position: relative;
+}
+header h1 span { color: var(--gold); }
+.header-rule {
+  width: 60px;
+  height: 3px;
+  background: var(--rust);
+  margin: 1.2rem auto;
+}
+.header-intro {
+  max-width: 560px;
+  margin: 0 auto;
+  font-size: .95rem;
+  font-weight: 300;
+  line-height: 1.7;
+  color: rgba(245,240,232,.75);
+  position: relative;
+}
+
+/* ── NEARBY BANNER ── */
+#nearby-banner {
+  display: none;
+  background: var(--rust);
+  color: #fff;
+  text-align: center;
+  padding: .75rem 1rem;
+  font-size: .875rem;
+  font-weight: 500;
+}
+#nearby-banner strong { font-weight: 700; }
+#nearby-banner .icon { margin-right: .4rem; }
+
+/* ── SECTION TITLES ── */
+.section-title {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(1.4rem, 3.5vw, 2rem);
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: .4rem;
+}
+.section-sub {
+  text-align: center;
+  font-size: .85rem;
+  color: rgba(26,18,8,.5);
+  margin-bottom: 2rem;
+  letter-spacing: .05em;
+}
+
+/* ── CAROUSEL ── */
+#carousel-section {
+  padding: 3rem 1rem 2rem;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.carousel-wrapper {
+  position: relative;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 24px 60px var(--shadow);
+}
+.carousel-track {
+  display: flex;
+  transition: transform .55s cubic-bezier(.65,0,.35,1);
+}
+.carousel-slide {
+  min-width: 100%;
+  position: relative;
+}
+.carousel-slide img {
+  width: 100%;
+  height: clamp(220px, 45vw, 460px);
+  object-fit: cover;
+  display: block;
+}
+.slide-caption {
+  position: absolute;
+  bottom: 0; left: 0; right: 0;
+  background: linear-gradient(transparent, rgba(26,18,8,.85));
+  padding: 2rem 1.5rem 1.2rem;
+  color: #fff;
+}
+.slide-caption h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(1.1rem, 3vw, 1.6rem);
+  font-weight: 700;
+}
+
+/* arrows */
+.carousel-btn {
+  position: absolute;
+  top: 50%; transform: translateY(-50%);
+  background: rgba(245,240,232,.9);
+  border: none;
+  width: 44px; height: 44px;
+  border-radius: 50%;
+  font-size: 1.1rem;
+  cursor: pointer;
+  display: flex; align-items: center; justify-content: center;
+  box-shadow: 0 4px 14px var(--shadow);
+  transition: background .2s, transform .2s;
+  z-index: 10;
+}
+.carousel-btn:hover { background: var(--gold); transform: translateY(-50%) scale(1.08); }
+.carousel-btn.prev { left: 12px; }
+.carousel-btn.next { right: 12px; }
+
+/* dots */
+.carousel-dots {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  margin-top: 1rem;
+}
+.dot {
+  width: 8px; height: 8px;
+  border-radius: 50%;
+  background: var(--sand);
+  border: none;
+  cursor: pointer;
+  transition: background .25s, transform .25s;
+}
+.dot.active { background: var(--rust); transform: scale(1.3); }
+
+/* ── LOADING / ERROR ── */
+#carousel-loading {
+  text-align: center;
+  padding: 3rem 1rem;
+  color: rgba(26,18,8,.45);
+  font-size: .9rem;
+}
+.spinner {
+  width: 36px; height: 36px;
+  border: 3px solid var(--sand);
+  border-top-color: var(--rust);
+  border-radius: 50%;
+  animation: spin .8s linear infinite;
+  margin: 0 auto 1rem;
+}
+@keyframes spin { to { transform: rotate(360deg); } }
+
+/* ── MUSEUMS GRID (QR cards) ── */
+#museums-section {
+  background: var(--sand);
+  padding: 3rem 1rem 4rem;
+}
+.museums-inner { max-width: 960px; margin: 0 auto; }
+
+.museum-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 1.5rem;
+}
+
+.museum-card {
+  background: var(--cream);
+  border-radius: 14px;
+  overflow: hidden;
+  box-shadow: 0 4px 20px var(--shadow);
+  transition: transform .25s, box-shadow .25s;
+}
+.museum-card:hover { transform: translateY(-5px); box-shadow: 0 12px 36px var(--shadow); }
+.museum-card img {
+  width: 100%; height: 160px;
+  object-fit: cover;
+  display: block;
+}
+.card-body { padding: 1rem 1.1rem 1.3rem; }
+.card-body h3 {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.05rem;
+  margin-bottom: .6rem;
+}
+
+/* QR block */
+.qr-block {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: .5rem;
+  margin-top: .8rem;
+  padding-top: .8rem;
+  border-top: 1px solid var(--sand);
+}
+.qr-block canvas,
+.qr-block img { border-radius: 6px; }
+.qr-label {
+  font-size: .7rem;
+  color: rgba(26,18,8,.45);
+  letter-spacing: .05em;
+  text-transform: uppercase;
+}
+.maps-link {
+  display: inline-flex;
+  align-items: center;
+  gap: .3rem;
+  font-size: .8rem;
+  font-weight: 500;
+  color: var(--rust);
+  text-decoration: none;
+  word-break: break-all;
+  text-align: center;
+}
+.maps-link:hover { text-decoration: underline; }
+
+/* skeleton placeholders */
+.skeleton-card {
+  background: var(--cream);
+  border-radius: 14px;
+  overflow: hidden;
+  box-shadow: 0 4px 20px var(--shadow);
+}
+.skel {
+  background: linear-gradient(90deg, var(--sand) 25%, #e0d4bc 50%, var(--sand) 75%);
+  background-size: 200%;
+  animation: shimmer 1.4s infinite;
+}
+.skel-img { height: 160px; }
+.skel-line { height: 14px; border-radius: 4px; margin: 1rem 1.1rem .5rem; }
+.skel-line.short { width: 60%; }
+@keyframes shimmer { to { background-position: -200%; } }
+
+/* ── FOOTER ── */
+footer {
+  background: var(--ink);
+  color: rgba(245,240,232,.45);
+  text-align: center;
+  padding: 1.5rem 1rem;
+  font-size: .78rem;
+  letter-spacing: .05em;
+}
+footer span { color: var(--gold); }
+
+/* ── RESPONSIVE ── */
+@media (max-width: 480px) {
+  .carousel-btn { width: 36px; height: 36px; font-size: .9rem; }
+}
