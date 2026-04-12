@@ -4,9 +4,9 @@
 ════════════════════════════════════ */
 
 import { getMuseums }       from './api.js';
-import { initCarousel }     from './modules/carousel.js';
-import { buildMuseumCards } from './modules/qr.js';
-import { initGeolocation }  from './modules/geolocation.js';
+import { initCarousel }     from '../modules/carousel.js';
+import { buildMuseumCards } from '../modules/qr.js';
+import { initGeolocation }  from '../modules/geolocation.js';
 
 (async () => {
   try {
