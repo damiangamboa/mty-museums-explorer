@@ -4,39 +4,39 @@
         "name": "Museo MARCO",
         "image": "http://localhost:3000/assets/images/marco.webp",
         "mapsUrl": "https://maps.google.com/?q=Museo+MARCO+Monterrey",
-        "lat": 25.666,
-        "lng": -100.309
+        "lat": 25.66482185147834,
+        "lng": -100.30979410491898
     },
     {
         "id": 2,
         "name": "Museo de Historia Mexicana",
         "image": "http://localhost:3000/assets/images/mhm_1.webp",
         "mapsUrl": "https://maps.google.com/?q=Museo+de+Historia+Mexicana",
-        "lat": 25.674,
-        "lng": -100.309
+        "lat": 25.671909952539817, 
+        "lng": -100.30639253225688
     },
     {
         "id": 3,
         "name": "Museo del Acero Horno 3",
         "image": "http://localhost:3000/assets/images/Horno3-1.webp",
         "mapsUrl": "https://www.google.com.mx/maps/place/Museo+del+Acero+horno+3",
-        "lat": 25.676,
-        "lng": -100.282
+        "lat": 25.676286696769616, 
+        "lng": -100.28252008992803
     },
     {
         "id": 4,
         "name": "Museo del Noreste (MUNE)",
         "image": "http://localhost:3000/assets/images/MUNE-1.webp",
         "mapsUrl": "https://www.google.com.mx/maps/place/Museo+del+Noreste",
-        "lat": 25.671,
-        "lng": -100.306
+        "lat": 25.671094733622855, 
+        "lng": -100.30671728992824
     },
     {
         "id": 5,
         "name": "Salón de la fama del Beisbol",
         "image": "http://localhost:3000/assets/images/SalonBeisbol-1.webp",
         "mapsUrl": "https://www.google.com.mx/maps/place/Sal%C3%B3n+de+la+Fama+del+B%C3%A9isbol+Mexicano",
-        "lat": 25.673,
-        "lng": -100.295
+        "lat": 25.67300872297849, 
+        "lng": -100.29552016294201
     }
 ]
