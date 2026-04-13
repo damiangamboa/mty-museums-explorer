@@ -14,5 +14,29 @@
         "mapsUrl": "https://maps.google.com/?q=Museo+de+Historia+Mexicana",
         "lat": 25.674,
         "lng": -100.309
+    },
+    {
+        "id": 3,
+        "name": "Museo del Acero Horno 3",
+        "image": "http://localhost:3000/assets/images/Horno3-1.webp",
+        "mapsUrl": "https://www.google.com.mx/maps/place/Museo+del+Acero+horno+3",
+        "lat": 25.676,
+        "lng": -100.282
+    },
+    {
+        "id": 4,
+        "name": "Museo del Noreste (MUNE)",
+        "image": "http://localhost:3000/assets/images/MUNE-1.webp",
+        "mapsUrl": "https://www.google.com.mx/maps/place/Museo+del+Noreste",
+        "lat": 25.671,
+        "lng": -100.306
+    },
+    {
+        "id": 5,
+        "name": "Salón de la fama del Beisbol",
+        "image": "http://localhost:3000/assets/images/SalonBeisbol-1.webp",
+        "mapsUrl": "https://www.google.com.mx/maps/place/Sal%C3%B3n+de+la+Fama+del+B%C3%A9isbol+Mexicano",
+        "lat": 25.673,
+        "lng": -100.295
     }
 ]
