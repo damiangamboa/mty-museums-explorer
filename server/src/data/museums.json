@@ -2,7 +2,7 @@
     {
         "id": 1,
         "name": "Museo MARCO",
-        "image": "/assets/images/marco.webp",
+        "image": "http://localhost:3000/assets/images/marco.webp",
         "mapsUrl": "https://maps.google.com/?q=Museo+MARCO+Monterrey",
         "lat": 25.666,
         "lng": -100.309
@@ -10,7 +10,7 @@
     {
         "id": 2,
         "name": "Museo de Historia Mexicana",
-        "image": "/assets/images/mhm_1.webp",
+        "image": "http://localhost:3000/assets/images/mhm_1.webp",
         "mapsUrl": "https://maps.google.com/?q=Museo+de+Historia+Mexicana",
         "lat": 25.674,
         "lng": -100.309
